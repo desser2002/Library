@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
-import static app.utils.InputUtils.*;
+import static utils.InputUtils.*;
 
 public class Main {
     public static void main(String[] args) {

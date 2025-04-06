@@ -1,4 +1,4 @@
-package app.utils;
+package utils;
 
 import java.time.Year;
 import java.util.Scanner;
