@@ -1,0 +1,21 @@
+[ {
+  "bookCopieId" : "927910df-50c2-46d6-b6e5-b4f35a601d79",
+  "bookId" : "4783d711-d787-47e9-b678-e1fac938ca0c",
+  "available" : true
+}, {
+  "bookCopieId" : "b8ec7423-be3f-4bcf-bf13-ad4000d5bcca",
+  "bookId" : "4783d711-d787-47e9-b678-e1fac938ca0c",
+  "available" : true
+}, {
+  "bookCopieId" : "433a728c-8598-4a51-aa2e-5d5fb3c19cec",
+  "bookId" : "4783d711-d787-47e9-b678-e1fac938ca0c",
+  "available" : true
+}, {
+  "bookCopieId" : "bdebd3e4-0062-42cb-8171-dc0cee9ffe0c",
+  "bookId" : "4783d711-d787-47e9-b678-e1fac938ca0c",
+  "available" : true
+}, {
+  "bookCopieId" : "04006433-af78-4e8d-92a9-302629da3759",
+  "bookId" : "4783d711-d787-47e9-b678-e1fac938ca0c",
+  "available" : true
+} ]

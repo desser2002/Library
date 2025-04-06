@@ -1,5 +1,6 @@
 package features.book;
 
+import java.time.Year;
 import java.util.UUID;
 
 public class Book {
@@ -12,12 +13,26 @@ public class Book {
 
 
     public Book(String title, String author, int year,int totalCopies) {
+        int currentYear = Year.now().getValue();
+        if (year > 0 && year <= currentYear)
+            this.year = year;
+        else throw new IllegalArgumentException("Year out of range");
+        if (totalCopies>availableCopies)
+        {
+            {
+                if (totalCopies>=0)
+                    this.totalCopies = totalCopies;
+                else totalCopies = 0;
+            }
+            if (availableCopies>=0)
+                this.availableCopies = availableCopies;
+            else availableCopies = 0;
+
+        }
         this.title = title;
         this.author = author;
-        this.year = year;
         this.id = UUID.randomUUID().toString();
-        this.totalCopies = totalCopies;
-        this.availableCopies = totalCopies;
+
     }
 
     public Book(){}
@@ -30,11 +45,15 @@ public class Book {
     public boolean returnBook(){ if (availableCopies<totalCopies) {availableCopies++; return true;}return false;}
 
     public int getYear() {
+
         return year;
     }
 
     public void setYear(int year) {
-        this.year = year;
+        int currentYear = Year.now().getValue();
+       if (year > 0 && year <= currentYear)
+           this.year = year;
+       else throw new IllegalArgumentException("Year out of range");
     }
 
     public String getAuthor() {
@@ -66,7 +85,7 @@ public class Book {
     }
 
     public void setTotalCopies(int totalCopies) {
-        this.totalCopies = totalCopies;
+        if (totalCopies > 0) this.totalCopies = totalCopies;
     }
 
     public int getAvailableCopies() {
@@ -74,6 +93,7 @@ public class Book {
     }
 
     public void setAvailableCopies(int availableCopies) {
-        this.availableCopies = availableCopies;
+        if (availableCopies > 0) this.availableCopies = availableCopies;
+
     }
 }

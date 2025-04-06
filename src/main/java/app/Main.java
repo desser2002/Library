@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
+import static app.utils.InputUtils.*;
+
 public class Main {
     public static void main(String[] args) {
                        Scanner scanner = new Scanner(System.in);
@@ -45,13 +47,13 @@ public class Main {
                         }
                         case "2" -> {
                             System.out.print("Title: ");
-                            String title = scanner.nextLine();
-                            System.out.print("Author: ");
-                            String author = scanner.nextLine();
-                            System.out.print("Year: ");
-                            int year = Integer.parseInt(scanner.nextLine());
-                            System.out.print("Number of copies: ");
-                            int copies = Integer.parseInt(scanner.nextLine());
+                            String title = capitalizeFirst(scanner.nextLine());
+
+                            System.out.print("Author (e.g., John Smith): ");
+                            String author = capitalizeEachWord(scanner.nextLine());
+
+                            int year = readYear(scanner, "Year: ");
+                            int copies = readInt(scanner, "Number of copies: ");
 
                             Book book = new Book(title, author, year, copies);
                             library.addBook(book, copies);
